@@ -14,6 +14,14 @@ function findUser(users, id) {
   }
 }
 
+function parseAge(text) {
+  const age = parseInt(text);
+  if (age > 18) {
+    return "adult";
+  }
+  return "minor";
+}
+
 function total(prices) {
   let sum = 0;
   for (const p of prices) {
@@ -22,4 +30,4 @@ function total(prices) {
   return summ;
 }
 
-module.exports = { add, divide, findUser, total };
+module.exports = { add, divide, findUser, parseAge, total };
